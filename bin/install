@@ -43,13 +43,13 @@ get_binary_path_in_archive() {
   local version=$3
   local platform=$4
 
-  echo "$archive_dir/$binary_name"
+  echo "$archive_dir/${binary_name}_${version}_${platform}/$binary_name"
 }
 
 get_platform() {
   local raw_platform
-  raw_platform=$(uname | tr '[:upper:]' '[:lower:]')
-  if test "$raw_platform" = "darwin"; then
+  raw_platform=$(uname)
+  if test "$raw_platform" = "Darwin"; then
     echo "macOS-64bit"
   else
     echo "$raw_platform-64bit"
