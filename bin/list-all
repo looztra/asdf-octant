@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # https://github.com/vmware/octant/releases/download/v0.6.0/octant_0.6.0_Linux-64bit.tar.gz
-github_coordinates=vmware/octant
+github_coordinates=vmware-tanzu/octant
 releases_path="https://api.github.com/repos/${github_coordinates}/releases"
 cmd="curl -s"
 if [ -n "$GITHUB_API_TOKEN" ]; then
